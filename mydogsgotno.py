@@ -69,7 +69,7 @@ def get_random_word_from_wordnik(part_of_speech):
     return word
 
 
-def mydog():
+def mydogsgotno():
     """ Create an absurd joke """
     print("Get words from Wordnik...")
     noun = get_random_word_from_wordnik("noun")
@@ -89,7 +89,7 @@ if __name__ == "__main__":
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument(
         '-y', '--yaml',
-        default='/Users/hugo/Dropbox/bin/data/mydog.yaml',
+        default='/Users/hugo/Dropbox/bin/data/mydogsgotno.yaml',
         help="YAML file location containing Twitter keys and secrets")
     parser.add_argument(
         '-nw', '--no-web', action='store_true',
@@ -104,7 +104,7 @@ if __name__ == "__main__":
                                        'http://api.wordnik.com/v4')
     words_api = WordsApi.WordsApi(wordnik_client)
 
-    tweet = mydog()
+    tweet = mydogsgotno()
 
     tweet_it(tweet, credentials)
 
